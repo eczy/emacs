@@ -1,7 +1,7 @@
 (require 'package)
 
 (add-to-list 'package-archives
-             '("elpy" . "http://jorgenschaefer.github.io/packages/"))
+             '("gnu" . "https://elpa.gnu.org/packages/"))
 
 (add-to-list 'package-archives
              '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
@@ -11,6 +11,9 @@
       '(solarized-theme
 	magit
 	evil
+	company
+	anaconda-mode
+	company-anaconda
 	))
 
 
