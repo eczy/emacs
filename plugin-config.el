@@ -3,6 +3,11 @@
 
 ;; company mode
 (add-hook 'after-init-hook 'global-company-mode)
+(global-set-key "\t" 'company-complete-common)
+(global-set-key "\t" 'company-manual-begin)
+(global-set-key "\t" 'company-complete)
+(global-set-key "\t" 'company-select-next)
+
 
 ;; company-anaconda
 (eval-after-load "company"
