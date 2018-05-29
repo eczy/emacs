@@ -11,9 +11,7 @@
       '(solarized-theme
 	magit
 	evil
-	company
-	anaconda-mode
-	company-anaconda
+	elpy
 	))
 
 
