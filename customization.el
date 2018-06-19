@@ -12,3 +12,6 @@
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
+
+;; auto refresh on file changes
+(global-auto-revert-mode t)
