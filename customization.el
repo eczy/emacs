@@ -1,5 +1,5 @@
 ;; load solarized theme
-(load-theme 'solarized-light t)
+(load-theme 'solarized-dark t)
 
 ;; change backup and temporary file locations
 (setq backup-directory-alist
