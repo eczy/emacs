@@ -12,6 +12,7 @@
 	magit
 	evil
 	elpy
+	auctex
 	))
 
 
