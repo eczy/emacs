@@ -10,7 +10,6 @@
 ;; hide welcome screen, menu bar, toolbar, and scrollbar
 (setq inhibit-startup-screen t)
 (menu-bar-mode -1)
-(toggle-scroll-bar -1)
 (tool-bar-mode -1)
 
 ;; auto refresh on file changes
