@@ -1,5 +1,5 @@
 ;; load solarized theme
-(load-theme 'solarized-dark t)
+(load-theme 'modus-vivendi t)
 
 ;; change backup and temporary file locations
 (setq backup-directory-alist

@@ -5,7 +5,7 @@
 
 ;; desired packages
 (setq package-list
-      '(solarized-theme
+      '(modus-themes
 	magit
 	evil
 	))
