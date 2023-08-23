@@ -1,7 +1,10 @@
 (require 'package)
 
 (add-to-list 'package-archives
-             '("gnu" . "https://elpa.gnu.org/packages/"))
+             '("gnu" . "https://elpa.gnu.org/packages/") t)
+
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
 
 ;; desired packages
 (setq package-list
