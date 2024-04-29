@@ -1,9 +1,11 @@
 ;; (package-initialize) ; handled in init-packages
 
-(load "~/.emacs.d/init-packages.el")
-(load "~/.emacs.d/plugin-config.el")
-(load "~/.emacs.d/customization.el")
-(load "~/.emacs.d/org-mode.el")
+
+(load "~/.emacs.d/00-init-packages.el")
+(load "~/.emacs.d/01-plugin-config.el")
+(load "~/.emacs.d/02-customization.el")
+(load "~/.emacs.d/03-org-mode.el")
+(load "~/.emacs.d/04-magit.el")
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
