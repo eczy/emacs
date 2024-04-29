@@ -1,7 +1,12 @@
 (require 'package)
 
+;; activate all the packages
+(package-initialize)
+
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+
+(package-refresh-contents)
 
 ;; desired packages
 (setq package-list '(
@@ -10,13 +15,6 @@
 	evil
 	terraform-mode
 ))
-
-;; activate all the packages
-(package-initialize)
-
-;; fetch the list of packages available 
-(unless package-archive-contents
-  (package-refresh-contents))
 
 ;; install the missing packages
 (dolist (package package-list)
