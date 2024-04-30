@@ -14,3 +14,6 @@
 
 ;; auto refresh on file changes
 (global-auto-revert-mode t)
+
+;; automatically insert matching delimiters
+(electric-pair-mode 1)
