@@ -15,6 +15,9 @@
 	evil
 	terraform-mode
 	treesit-auto
+	eglot
+	company
+	yasnippet
 ))
 
 ;; install the missing packages
