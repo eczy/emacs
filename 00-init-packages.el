@@ -14,9 +14,11 @@
 	magit
 	evil
 	terraform-mode
+	treesit-auto
 ))
 
 ;; install the missing packages
 (dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))
+
