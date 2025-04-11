@@ -17,3 +17,6 @@
 
 ;; automatically insert matching delimiters
 (electric-pair-mode 1)
+
+;; guarantee noewlines in files both on visiting and saving
+(require-final-newline visit-save)
