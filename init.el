@@ -1,4 +1,8 @@
+;; -*- lexical-binding: t; -*-
 (setq inhibit-startup-screen t)
+
+;;; --- Backup Files ---
+(setq backup-directory-alist '(("." . "~/.emacs.d/backup")))
 
 ;;; --- Appearance ---
 (tool-bar-mode -1)
@@ -44,7 +48,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(evil magit modus-themes)))
+ '(package-selected-packages nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -60,3 +64,18 @@
 ;;; --- Magit ---
 (unless (package-installed-p 'magit)
   (package-install 'magit))
+
+;;; --- Rust ---
+(unless (package-installed-p 'rust-mode)
+  (package-install 'rust-mode))
+
+(require 'rust-mode)
+
+(add-hook 'rust-mode-hook
+          (lambda () (setq indent-tabs-mode nil)))
+
+(setq rust-format-on-save t)
+
+(add-hook 'rust-mode-hook
+          (lambda () (prettify-symbols-mode)))
+
