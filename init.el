@@ -1,4 +1,8 @@
+;; -*- lexical-binding: t; -*-
 (setq inhibit-startup-screen t)
+
+;;; --- Backup Files ---
+(setq backup-directory-alist '(("." . "~/.emacs.d/backup")))
 
 ;;; --- Appearance ---
 (tool-bar-mode -1)
@@ -39,18 +43,6 @@
 ;; Enable Evil
 (require 'evil)
 (evil-mode 1)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(evil magit modus-themes)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
 ;;; --- Org Mode ---
 (global-set-key (kbd "C-c l") #'org-store-link)
@@ -60,3 +52,31 @@
 ;;; --- Magit ---
 (unless (package-installed-p 'magit)
   (package-install 'magit))
+
+;;; --- Rust ---
+(unless (package-installed-p 'rust-mode)
+  (package-install 'rust-mode))
+
+(require 'rust-mode)
+
+(add-hook 'rust-mode-hook
+          (lambda () (setq indent-tabs-mode nil)))
+
+(setq rust-format-on-save t)
+
+(add-hook 'rust-mode-hook
+          (lambda () (prettify-symbols-mode)))
+
+;;; --- Custom ---
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
