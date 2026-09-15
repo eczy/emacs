@@ -5,8 +5,9 @@
 (setq backup-directory-alist '(("." . "~/.emacs.d/backup")))
 
 ;;; --- Appearance ---
-(tool-bar-mode -1)
-(global-visual-line-mode t)
+(when (display-graphic-p)
+  (tool-bar-mode -1)
+  (global-visual-line-mode t))
 
 ;;; --- Writing ---
 (global-display-line-numbers-mode t)
